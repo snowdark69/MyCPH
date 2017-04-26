@@ -37,7 +37,9 @@
                 android:layout_height="wrap_content"
                 android:src="@mipmap/ic_user" />
 
+            <!-- id must be @+id/xxx-->
             <EditText
+                android:id="@+id/edtuser"
                 android:inputType="text"
                 android:hint="@string/user"
                 android:layout_width="match_parent"
@@ -56,6 +58,7 @@
                 android:src="@mipmap/ic_password" />
 
             <EditText
+                android:id="@+id/edtPassword"
                 android:inputType="textPassword"
                 android:hint="@string/password"
                 android:layout_width="match_parent"
@@ -63,7 +66,10 @@
 
         </LinearLayout>
 
+        <!-- text must var clickable-->
         <TextView
+            android:clickable="true"
+            android:id="@+id/txtNewRegis"
             android:textColor="@color/colorPrimaryDark"
             android:textStyle="bold"
             android:layout_gravity="center_horizontal"
@@ -75,6 +81,7 @@
     </LinearLayout>
 
     <Button
+        android:id="@+id/btnLogin"
         android:textColor="@color/white"
         android:background="@color/colorPrimary"
         android:layout_width="match_parent"
