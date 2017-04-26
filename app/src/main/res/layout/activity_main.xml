@@ -7,7 +7,6 @@
     tools:context="cph.udomsin.songwut.mycph.MainActivity">
 
 
-
     <ImageView
         android:scaleType="centerCrop"
         android:src="@drawable/cph_wall"
@@ -16,61 +15,60 @@
 
     <LinearLayout
         android:padding="20dp"
-        android:background="#8282e9de"
-        android:orientation="vertical"
+        android:background="#82ffffff"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/margin"
-        android:layout_marginRight="@dimen/margin"
-        android:layout_marginTop="50dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true">
-
+        android:layout_margin="@dimen/margin"
+        android:orientation="vertical">
 
         <ImageView
-            android:layout_gravity="center_horizontal"
-            android:src="@drawable/cph_logo"
             android:layout_width="@dimen/logo"
-            android:layout_height="@dimen/logo" />
+            android:layout_height="@dimen/logo"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/cph_logo" />
 
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <ImageView
-                android:src="@mipmap/ic_user"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_user" />
 
             <EditText
+                android:inputType="text"
+                android:hint="@string/user"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
         </LinearLayout>
 
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <ImageView
-                android:src="@mipmap/ic_password"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_password" />
 
             <EditText
+                android:inputType="textPassword"
+                android:hint="@string/password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
         </LinearLayout>
 
-        <EditText
+        <TextView
             android:textColor="@color/colorPrimaryDark"
             android:textStyle="bold"
             android:layout_gravity="center_horizontal"
             android:textSize="@dimen/h2"
-            android:text="@string/newregis"
+            android:text="@string/regis"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
@@ -79,12 +77,10 @@
     <Button
         android:textColor="@color/white"
         android:background="@color/colorPrimary"
-        android:layout_alignParentBottom="true"
-        android:text="@string/login"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="@string/login" />
 
 
 </RelativeLayout>
