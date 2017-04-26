@@ -2,8 +2,11 @@
     <string name="app_name">MyCPH</string>
     <string name="login">ลงชื่อผู้ใช้งาน</string>
     <string name="newregis2">ลงทะเบียนใหม่</string>
-    <string name="newregis">ลงทะเบียนใหม่</string>
+    <string name="newregis">สมัครสมาชิก</string>
     <string name="password">password</string>
     <string name="regis">ลงชื่อผู้ใช้งาน</string>
     <string name="user">user</string>
+    <string name="text">SignUp</string>
+    <string name="name">Name :</string>
+    <string name="nameregis">กรุณากรอกข้อมูล</string>
 </resources>
