@@ -126,6 +126,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Toast.makeText(MainActivity.this,"Welcome" + loginStrings[1],
                         Toast.LENGTH_SHORT).show();
 
+                //ย้ายหน้าแบบเอาข้อมูลของคน Login ไปด้วย ส่งจากไหน ไปไหน
+                Intent intent = new Intent(MainActivity.this, ServiceActivity.class);
+
+                // ส่งค่าอะไรไป
+                intent.putExtra("Login", loginStrings);
+                startActivity(intent);
+                finish(); //ปิดหน้า ถ้าเข้าใหม่ต้อง Login ใหม่
+
             } else {
                 MyAlert myAlert = new MyAlert(MainActivity.this);
                 myAlert.myDialog("Password False","Please Try Again Password False");

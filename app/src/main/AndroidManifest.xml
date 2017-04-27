@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="cph.udomsin.songwut.mycph">
 
-    <!--  ขออนุญาติใช้เนต จะต้องออกเน็ตได้ -->
+    <!-- ขออนุญาติใช้เนต จะต้องออกเน็ตได้ -->
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -19,7 +19,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SignUpActivity"></activity>
+        <activity android:name=".SignUpActivity" />
+        <activity android:name=".ServiceActivity" />
+        <activity android:name=".DetailActivity"></activity>
     </application>
 
 </manifest>
