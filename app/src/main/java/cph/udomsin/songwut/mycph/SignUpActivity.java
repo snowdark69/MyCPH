@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class SignUpActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -63,6 +64,15 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
 
                     String result = postData.get();
                     Log.d("26AprilV1", "result ==>" + result);
+                    if (Boolean.parseBoolean(result)) {
+                        Toast.makeText(SignUpActivity.this, "Upload Value To Server OK",
+                                Toast.LENGTH_SHORT).show();
+                        finish();
+                    } else {
+                        Toast.makeText(SignUpActivity.this, "Cannot Upload",
+                                Toast.LENGTH_SHORT).show();
+                    }
+
 
                 } catch (Exception e) {
                     Log.d("26AprilV1", "e SignUP ==>" + e.toString());

@@ -18,8 +18,11 @@ import com.squareup.okhttp.Response;
 //ใส่ Void จะไม่มีโปรเซส หมุนติ้วๆขึ้นมาโชว์ แล้วส่ง ่ค่า string กลับมา ($Result --> echo True,False
 public class PostData extends AsyncTask<String, Void, String>{ //สร้าง implement AsyncTask โดยกด Alt + Enter
 
+
+
     private Context context; // ใช้ context ส่งข้อมูล เข้าเซิฟเวอร์ , มอง context เป็น ท่อที่ใช้ส่งข้อมูล , สร้าง constructor กด alt + enter หน้า context
-    private static final String urlPHP = "http://swiftcodingthai.com/cph/addUserMasterArt.php"; //สร้างตัวแปรคงที่ (Static)ที่ไม่สามารถแก้ไข้ได้ ที่ชือว่า urlPHP
+    //private static final String urlPHP = "http://swiftcodingthai.com/cph/addUserMasterArt.php"; //สร้างตัวแปรคงที่ (Static)ที่ไม่สามารถแก้ไข้ได้ ที่ชือว่า urlPHP
+    private static final String urlPHP = "http://swiftcodingthai.com/cph/addUserMaster.php";
 
     public PostData(Context context) {
         this.context = context;

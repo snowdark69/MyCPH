@@ -69,7 +69,7 @@
         <!-- text must var clickable-->
         <TextView
             android:clickable="true"
-            android:id="@+id/txtNewRegis"
+            android:id="@+id/txtLogin"
             android:textColor="@color/colorPrimaryDark"
             android:textStyle="bold"
             android:layout_gravity="center_horizontal"
