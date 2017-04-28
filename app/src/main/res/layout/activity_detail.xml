@@ -33,62 +33,75 @@
 
     </RelativeLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/margin"
-        android:layout_marginTop="@dimen/h2"
-        android:text="Date"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="@dimen/h2"
-        android:textStyle="italic" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/txtDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/margin"
-        android:text="2012/12/13 00:00:00"
-        android:textColor="@color/colorPrimary"
-        android:textSize="@dimen/h2" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/margin"
-        android:layout_marginTop="@dimen/h2"
-        android:text="Detail"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="@dimen/h2"
-        android:textStyle="italic" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginTop="@dimen/h2"
+                android:text="Date"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/h2"
+                android:textStyle="italic" />
 
-    <TextView
-        android:id="@id/txtDetail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/margin"
-        android:text="detail"
-        android:textColor="@color/colorPrimary"
-        android:textSize="@dimen/h2" />
+            <TextView
+                android:id="@+id/txtDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin"
+                android:text="2012/12/13 00:00:00"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/h2" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/margin"
-        android:layout_marginTop="@dimen/h2"
-        android:text="@string/namesave"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="@dimen/h2"
-        android:textStyle="italic" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginTop="@dimen/h2"
+                android:text="Detail"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/h2"
+                android:textStyle="italic" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtReceiveName"
-        android:layout_marginLeft="@dimen/margin"
-        android:text="@string/name"
-        android:textColor="@color/colorPrimary"
-        android:textSize="@dimen/h2" />
+            <TextView
+                android:id="@+id/txtDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin"
+                android:text="detail"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/h2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginTop="@dimen/h2"
+                android:text="@string/namesave"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/h2"
+                android:textStyle="italic" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtReceiveName"
+                android:layout_marginLeft="@dimen/margin"
+                android:text="@string/name"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/h2" />
+
+        </LinearLayout>
+
+    </ScrollView>
 
 
 </LinearLayout>

@@ -1,5 +1,6 @@
 package cph.udomsin.songwut.mycph;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -67,12 +68,19 @@ public class ServiceActivity extends AppCompatActivity {
             MyAdapter myAdapter = new MyAdapter(ServiceActivity.this, nameStrings, dateStrings, detailStrings);
             listView.setAdapter(myAdapter);
 
-            //setonitemclick = จิ้มที่ position ไหน
+            //setonitemclick = จิ้มที่ position ไหน , เมื่อจิ้มที่ list View ให้ืำอะไีร
             listView.setOnItemClickListener(new AdapterView.OnItemClickListener() { //เมื่อเลือก OnItemClick จะสร้างเ method ใให้อัตโนมัติ
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                     Log.d(tag, "You Click ==> " + qrCodeStrings[position]);
+
+                    //เมื่อจิ้มที่ list view แล้วไปทำงานที่ detailActivity
+                    Intent intent = new Intent(ServiceActivity.this, DetailActivity.class);
+
+                    //แนบข้อมูลไปด้วย (QRcode)
+                    intent.putExtra("QRcode", qrCodeStrings[position]);
+                    startActivity(intent);
 
                 }
             });
