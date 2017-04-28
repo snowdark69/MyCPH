@@ -1,9 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="cph.udomsin.songwut.mycph.DetailActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:padding="@dimen/padding">
+
+        <ImageView
+            android:id="@+id/imvBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_back" />
+
+        <TextView
+            android:id="@+id/txtName"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/name"
+            android:textColor="@color/white"
+            android:textSize="@dimen/h2"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin"
+        android:layout_marginTop="@dimen/h2"
+        android:text="Date"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/h2"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/txtDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin"
+        android:text="2012/12/13 00:00:00"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/h2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin"
+        android:layout_marginTop="@dimen/h2"
+        android:text="Detail"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/h2"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@id/txtDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin"
+        android:text="detail"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/h2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin"
+        android:layout_marginTop="@dimen/h2"
+        android:text="@string/namesave"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/h2"
+        android:textStyle="italic" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtReceiveName"
+        android:layout_marginLeft="@dimen/margin"
+        android:text="@string/name"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/h2" />
+
+
+</LinearLayout>

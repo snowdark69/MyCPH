@@ -3,6 +3,8 @@ package cph.udomsin.songwut.mycph;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -33,7 +35,7 @@ public class ServiceActivity extends AppCompatActivity {
     }// Main Method
 
     private void createListView() {
-        String tag = "27AprilV2";
+        final String tag = "27AprilV2";
         String urlPHP = "http://swiftcodingthai.com/cph/getProduct.php";
 
         try {
@@ -64,6 +66,16 @@ public class ServiceActivity extends AppCompatActivity {
 
             MyAdapter myAdapter = new MyAdapter(ServiceActivity.this, nameStrings, dateStrings, detailStrings);
             listView.setAdapter(myAdapter);
+
+            //setonitemclick = จิ้มที่ position ไหน
+            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() { //เมื่อเลือก OnItemClick จะสร้างเ method ใให้อัตโนมัติ
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                    Log.d(tag, "You Click ==> " + qrCodeStrings[position]);
+
+                }
+            });
 
         } catch (Exception e) { //สร้างตัวดักจับ error ที่รับได้
             Log.d(tag, "e createListView ==>" + e.toString());
