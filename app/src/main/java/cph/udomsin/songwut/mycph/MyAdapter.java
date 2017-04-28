@@ -57,8 +57,25 @@ public class MyAdapter extends BaseAdapter{ //BaseAdapter คือ ตัวส
 
         nameTextView.setText(nameStrings[position]); //show nameString ที่รับค่ามา ค่าตำแหน่งที่ position ตามที่ประกาศตัวแปรไว้ใน public
         dateTextView.setText(dateStrings[position]);
-        detailTextView.setText(detailStrings[position]);
+        //detailTextView.setText(detailStrings[position]);
+        detailTextView.setText(createDetailshow(detailStrings[position])); //เอาข้อมูลใส่เข้าไปแล้วถึงตัดเอาออกมา โดยสร้าง method cretaeDetailshow
 
         return view; //ส่งค่า view กลับมา
+    }
+
+    private String createDetailshow(String detailString) {
+
+        String result = null;
+
+        if (detailString.length() >= 30) { // ถ้า detailString มีคา่ มากกว่า = 30
+
+            result = detailString.substring(0,30) + "..."; //ตัดคำเยอะๆให้เป็นจุด 3 จุด ถ้าเกิน 30 คำ
+
+        } else {
+            result = detailString;
+        }
+
+        return result;
+
     }
 }//Main Class
