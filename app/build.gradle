@@ -5,7 +5,7 @@ android {
     buildToolsVersion "25.0.2"
     defaultConfig {
         applicationId "cph.udomsin.songwut.mycph"
-        minSdkVersion 21
+        minSdkVersion 19 // เวอร์ชั่น android ที่จะใช้ RUN
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"

@@ -13,7 +13,7 @@ import android.widget.TextView;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-public class ServiceActivity extends AppCompatActivity {
+public class ServiceActivity extends AppCompatActivity implements View.OnClickListener {
 
     private TextView textView;
     private ImageView imageView;
@@ -32,8 +32,34 @@ public class ServiceActivity extends AppCompatActivity {
 
         createListView();
 
+        controller();
+
 
     }// Main Method
+
+
+    //สร้าง Overide Method สำเร็จรูป แล้ว สือทอด Class มาจาก สิ่งที่มีอยู่แล้ว
+    @Override
+    protected void onActivityResult(int requestCode,
+                                    int resultCode,
+                                    Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (resultCode == RESULT_OK) {// ถ้า scan แล้วได้ค่า ให้เอากลับมาให้ดู
+            String result = data.getStringExtra("SCAN_RESULT"); // ค่าบังคับ SCAN_RESULT
+            Log.d("28AprilV3", "Result From Scan ==> " + result);
+
+            Intent intent = new Intent(ServiceActivity.this, DetailActivity.class);
+            intent.putExtra("QRcode", result);
+            startActivity(intent);
+
+        }
+
+    }
+
+    private void controller() { // เมื่อจิ้มที่รูปแล้วจะให้ทำอะไร
+        imageView.setOnClickListener(ServiceActivity.this); //ต้องสร้าง Implement ของ ServiceActivity โดยกด alt + enter (เพิ่้อจะสั่งให้ทำอะไรต่อ)
+    }
 
     private void createListView() {
         final String tag = "27AprilV2";
@@ -101,5 +127,24 @@ public class ServiceActivity extends AppCompatActivity {
         imageView = (ImageView) findViewById(R.id.imvQR);
         listView = (ListView) findViewById(R.id.livProduct);
 
+    }
+
+    @Override
+    public void onClick(View v) {
+
+        String tag = "28AprilV3";
+
+        if (v == imageView) {
+            try {
+
+                Intent intent = new Intent("com.google.zxing.client.android.SCAN");
+                intent.putExtra("SCAN_MODE", "QR_CODE_MODE"); //ส่ง key SCAN_MODE และ QR_CODE_MODE เข้าไปเพื่อให้รู้ว่าจะทำอะไรที่เว็ปปลายทาง
+                startActivityForResult(intent, 10); //เลข 10 คือ integer ของ request code
+
+
+            } catch (Exception e) {
+                Log.d(tag, "e onClick ==> " + e.toString());
+            }
+        }
     }
 } //Main Class
